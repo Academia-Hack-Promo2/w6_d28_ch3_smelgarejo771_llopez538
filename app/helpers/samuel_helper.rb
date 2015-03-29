@@ -1,0 +1,2 @@
+module SamuelHelper
+end
