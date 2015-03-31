@@ -11,7 +11,7 @@ class SamuelController < ApplicationController
 			fiesta = Fiesta.find((params[:id]).to_i)
 			render json: fiesta.to_json
 		else
-			render json: ("El usuario no existe")
+			render json: {"Error" => "El usuario no existe"}
 		end		
 	end	
 
@@ -29,7 +29,7 @@ class SamuelController < ApplicationController
 			fiesta.save
 			render json: fiesta.to_json
 		else
-			render json: ("El usuario no existe")
+			render json: {"Error" => "El usuario no existe"}
 		end
 	end
 
@@ -40,7 +40,7 @@ class SamuelController < ApplicationController
 			fiesta.delete
 			render json: fiesta.to_json
 		else
-			render json: ("El usuario no existe")
+			render json: {"Error" => "El usuario no existe"}
 		end
 	end
 
